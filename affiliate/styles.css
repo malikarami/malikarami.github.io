@@ -155,6 +155,7 @@
     width: 100%;
     max-width: 420px;
     display: flex;
+    margin: 0 auto;
     margin-bottom: 33px;
     flex-direction: column;
     position: relative;
@@ -267,8 +268,10 @@
     color: #1caa64;
   }
 
-
-
-
+  .history-titles::-webkit-scrollbar-thumb,
+  .history-titles::-webkit-scrollbar,
+  .history-titles::-webkit-scrollbar-track {
+      display: none;
+  }
 
 
