@@ -11,6 +11,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
   }
   
   span {
@@ -23,7 +24,6 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-
     display: inline-flex;
     align-items: center;
   }
@@ -179,7 +179,7 @@
     flex-shrink: 0;
     height: 55px;
     list-style: none;
-    min-width: 150px;
+    min-width: 152px;
   }
 
   .performance-titles li:first-of-type{
@@ -189,8 +189,8 @@
   .performance-title {
     display: inline-block;
     font-size: 16px;
-    font-weight: 500;
     color: #979797;
+    font-weight: normal;
     padding: 0;
     margin: 12px 8px 12px 8px;
     list-style: none;
