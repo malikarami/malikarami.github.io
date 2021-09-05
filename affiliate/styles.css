@@ -152,7 +152,8 @@
   }
 
   .bottom-container{
-    width: 100vw;
+    width: 100%;
+    max-width: 420px;
     display: flex;
     margin-bottom: 33px;
     flex-direction: column;
@@ -162,13 +163,13 @@
 
   .history-titles__wrapper{
       height: 56px;
-      width: 100vw;
+      width: 100%;
       margin-bottom: 32px;
       position: relative;
   }
 
   .history-titles {
-    width: 100vw;
+    width: 100%;
     margin-bottom: 6px;
     height: 48px;
     display: flex;
@@ -213,9 +214,10 @@
   }
 
   .divider-line{ 
-    width: 100vw;
+    width: 100%;
     height: 1px;
     margin-top: 6px;
+    background: #d6d6d6;
     border: solid 1px #d6d6d6;
   }
 
@@ -226,20 +228,21 @@
     width: 158.6px;
     height: 1px;
     margin: 0px 9.4px 0 16px;
+    background: #2266f4;
     border: solid 2px #2266f4;
   }
 
   .history{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 16px;
   }
 
   .history-row{
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
   }
 
   .history-row span {
