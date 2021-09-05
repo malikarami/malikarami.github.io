@@ -155,7 +155,6 @@
     margin: 0 auto;
     flex-direction: column;
     position: relative;
-    overflow-x: scroll;
   }
 
   .performance-titles-wrapper{
@@ -172,7 +171,6 @@
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-
     list-style: none;
     padding: 0 8px 0 0;
   }
@@ -180,8 +178,8 @@
   .performance-titles li{
     flex-shrink: 0;
     height: 55px;
-
     list-style: none;
+    min-width: 150px;
   }
 
   .performance-titles li:first-of-type{
