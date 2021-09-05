@@ -15,7 +15,6 @@
   
   span {
     font-family: dana, sans-serif;
-    font-weight: 500;
     text-align: center;
     direction: rtl;
     font-size: 1rem;
@@ -70,8 +69,7 @@
     align-items: center;
   }
 
-  .main-title__wrap {
-    width: 304px;
+  .main-title-wrapper {
     height: 56px;
     margin: 24px 0 0 14px;
     padding: 8px 16px 8px 24px;
@@ -82,8 +80,7 @@
     align-items: center;
   }
 
-  .main-title__text {
-    width: 232px;  
+  .main-title-text {
     height: 40px;
     margin: 0 7px 0 0;
     font-size: 16px;
@@ -115,7 +112,7 @@
     border: solid 2px inherit;
   }
 
-  .center-container{
+  .date-container{
     width: 100vw;
     height: 50px;
     margin-top: 136px;
@@ -151,53 +148,60 @@
     object-fit: contain;
   }
 
-  .bottom-container{
+  .performance-history{
     width: 100%;
     max-width: 420px;
     display: flex;
     margin: 0 auto;
-    margin-bottom: 33px;
     flex-direction: column;
     position: relative;
     overflow-x: scroll;
   }
 
-  .history-titles__wrapper{
+  .performance-titles-wrapper{
       height: 56px;
       width: 100%;
       margin-bottom: 32px;
       position: relative;
   }
 
-  .history-titles {
+  .performance-titles {
     width: 100%;
     margin-bottom: 6px;
-    height: 48px;
+    height: 56px;
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    margin: 0;
-    padding: 0;
+
     list-style: none;
+    padding: 0 8px 0 0;
   }
 
-  .history-titles li{
+  .performance-titles li{
     flex-shrink: 0;
+    height: 55px;
+
     list-style: none;
   }
 
-  .history-title {
+  .performance-titles li:first-of-type{
+    border-bottom: 2px solid #2266f4;
+  }
+
+  .performance-title {
     display: inline-block;
     font-size: 16px;
     font-weight: 500;
     color: #979797;
     padding: 0;
-    margin: 12px 16px;
+    margin: 12px 8px 12px 8px;
     list-style: none;
     vertical-align: middle;
+    cursor: pointer;
   }
 
-  .selected__history-title{
+
+  .selected-performance-title{
     font-weight: 500;
     color: #2266f4;
   }
@@ -206,12 +210,11 @@
     position: absolute;
     top: 0;
     left: 0;  
-    width: 63px;
+    width: 30px;
     height: 64px;
-    margin: 0;
     margin-right: 129px;
-    padding: 8px 47px 8px 0;
-    background-image: linear-gradient(to left, rgba(128, 32, 32, 0) 50%, #fff);
+    padding: 8px 0;
+    background-image: linear-gradient(to left, rgba(128, 32, 32, 0) 0%, #fff);
   }
 
   .divider-line{ 
@@ -220,57 +223,48 @@
     margin-top: 6px;
     background: #d6d6d6;
     border: solid 1px #d6d6d6;
-  }
-
-  .selector-line {
     position: absolute;
+    z-index: -1;
     bottom: 0;
-    right: 0;  
-    width: 158.6px;
-    height: 1px;
-    margin: 0px 9.4px 0 16px;
-    background: #2266f4;
-    border: solid 2px #2266f4;
   }
 
-  .history{
+  .performance{
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0 16px;
   }
 
-  .history-row{
+  .performance-row{
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
   }
 
-  .history-row span {
+  .performance-row span {
     height: 32px;
-    font-family: Dana;
     font-size: 14px;
     color: #4d4d4d;
   }
 
-  .history-row .count{
+  .performance-row .count{
     font-size: 16px;
     text-align: left;
     line-height: 1.75;
     color: #000;
   }
 
-  .activated .count{
-    color: #0065dc;
+  .activated{
+    color: #0065dc !important;
   }
 
-  .confirmed .count{
-    color: #1caa64;
+  .approved{
+    color: #1caa64 !important;
   }
 
-  .history-titles::-webkit-scrollbar-thumb,
-  .history-titles::-webkit-scrollbar,
-  .history-titles::-webkit-scrollbar-track {
+  .performance-titles::-webkit-scrollbar-thumb,
+  .performance-titles::-webkit-scrollbar,
+  .performance-titles::-webkit-scrollbar-track {
       display: none;
   }
 
