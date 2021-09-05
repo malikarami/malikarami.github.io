@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background: #131e24;
+    font-family: 'Padauk', 'Ubuntu' , sans-serif;
+    margin: 0;
+    color: black;
+    text-align: center;
+}
+
+.header{
+    background-image: url("../media/banner2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    margin: 0;
+    padding: 0;
+    -moz-box-shadow:    inset 0 0 10px #131e24;
+    -webkit-box-shadow: inset 0 0 10px #131e24;
+    box-shadow:         inset 0 0 25px #131e24;
+}
+
+main{
+    position: fixed;
+    top: 30%;
+    left: calc(50% - 190px);
+    background: white;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: rgba(171, 118, 56, 0.53) 0 15px 25px,
+                rgba(200, 154, 67, 0.75) 0 5px 10px;
+    padding: 1rem 3vw 2rem 3vw;
+    display: grid;
+}
+
+.sign-up{
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-auto-flow: row;
+    grid-gap: 5px;
+}
+
+.sign-up label{
+    align-self: baseline;
+    justify-self: start;
+}
+
+.submit{
+    grid-column-end: span 2;
+    border: 1px solid green;
+    background-color: lightgreen;
+    height: 22px;
+    cursor: pointer;
+}
+
+.button{
+    border: 1px solid red;
+    background-color: lightpink;
+    height: 22px;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.button:hover,
+.button:active, .button:visited{
+    text-decoration: none;
+    color: black;
+}
