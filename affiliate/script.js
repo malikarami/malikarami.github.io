@@ -25,13 +25,6 @@ const performancePage = document.getElementsByClassName("performance")[0];
 updatePerformance(history.referedByPhoneNumber);
 let selectedTitle = document.getElementsByClassName("selected-performance-title")[0];
 
-String.prototype.toIndiaDigits = function(){
-    var id= ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
-    return this.replace(/[0-9]/g, function(w){
-        return id[+w]
-    });
-}
-
 const titles = document.querySelectorAll(".performance-title");
 for(let i = 0 ; i < titles.length ; i++){
     titles[i].addEventListener('click', () => {
@@ -40,6 +33,7 @@ for(let i = 0 ; i < titles.length ; i++){
         selectedTitle = titles[i];
         selectedTitle.classList.add("selected-performance-title");
         selectedTitle.parentElement.style.borderBottom = '2px solid #2266f4';
+        selectedTitle.scrollIntoView();
         switch(i){
             case 0:
                 updatePerformance(history.referedByPhoneNumber);
@@ -60,6 +54,7 @@ function updatePerformance(performance){
     performancePage.querySelector(".approved").innerHTML = performance.approved;
     performancePage.querySelector(".activated").innerHTML = performance.activated;
 }
+
 
 
 
