@@ -24,7 +24,12 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-
+    /*older safari versions*/
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    /*older safari versions*/
     display: inline-flex;
     align-items: center;
   }
@@ -34,9 +39,6 @@
   }
   
   .root{
-    -ms-flex: 1 0 0;
-    -webkit-flex: 1 0 0;
-    flex: 1 0 0;
     position: fixed;
     top:0;
     right: 0;
@@ -58,10 +60,19 @@
     margin: 0 0 42px;
     padding: 0 0 14px;
     background-color: #2266f4;
-
     position: fixed;
     left: 0;
     top: 0;
+    /*older safari versions*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-jistify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-align-content: center;
+    -webkit-align-content: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    /*older safari versions*/
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -73,7 +84,14 @@
     margin: 24px 0 0 14px;
     padding: 8px 16px 8px 24px;
     background-color: inherit;
-
+    /*older safari versions*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-jistify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    /*older safari versions*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -116,6 +134,14 @@
     height: 50px;
     margin-top: 136px;
     margin-bottom: 40px;
+    /*older safari versions*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-jistify-content: center;
+    -webkit-justify-content: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    /*older safari versions*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,7 +161,12 @@
     font-size: 24px;
     line-height: 1.04;
     color: #4d4d4d;
-
+    /*older safari versions*/
+    -ms-jistify-content: center;
+    -webkit-justify-content: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    /*older safari versions*/
     justify-content: center;
     align-items: center;
   }
@@ -150,8 +181,14 @@
   .performance-history{
     width: 100%;
     max-width: 420px;
-    display: flex;
     margin: 0 auto;
+    /*older safari versions*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    /*older safari versions*/
+    display: flex;
     flex-direction: column;
     position: relative;
   }
@@ -167,6 +204,10 @@
     width: 100%;
     margin-bottom: 6px;
     height: 56px;
+    /*older safari versions*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    /*older safari versions*/
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -230,6 +271,12 @@
   }
 
   .performance{
+    /*older safari versions*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    /*older safari versions*/
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -237,6 +284,12 @@
   }
 
   .performance-row{
+    /*older safari versions*/
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -ms-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    /*older safari versions*/
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
