@@ -33,16 +33,18 @@ for(let i = 0 ; i < titles.length ; i++){
         selectedTitle = titles[i];
         selectedTitle.classList.add("selected-performance-title");
         selectedTitle.parentElement.style.borderBottom = '2px solid #2266f4';
-        selectedTitle.scrollIntoView();
         switch(i){
             case 0:
                 updatePerformance(history.referedByPhoneNumber);
+                document.querySelector(".performance-titles").scrollLeft = 0;
                 break;
             case 1:
                 updatePerformance(history.referredByLink);
+                document.querySelector(".performance-titles").scrollLeft -= 14;
                 break;
             case 2:
                 updatePerformance(history.total);
+                document.querySelector(".performance-titles").scrollLeft -= 14;
                 break;  
         }
     })
