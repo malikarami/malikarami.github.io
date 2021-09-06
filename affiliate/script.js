@@ -33,6 +33,7 @@ for(let i = 0 ; i < titles.length ; i++){
         selectedTitle = titles[i];
         selectedTitle.classList.add("selected-performance-title");
         selectedTitle.parentElement.style.borderBottom = '2px solid #2266f4';
+        console.log(document.querySelector(".performance-titles").scrollLeft);
         switch(i){
             case 0:
                 updatePerformance(history.referedByPhoneNumber);
@@ -40,11 +41,11 @@ for(let i = 0 ; i < titles.length ; i++){
                 break;
             case 1:
                 updatePerformance(history.referredByLink);
-                document.querySelector(".performance-titles").scrollLeft -= 14;
+                document.querySelector(".performance-titles").scrollLeft = -120;
                 break;
             case 2:
                 updatePerformance(history.total);
-                document.querySelector(".performance-titles").scrollLeft -= 14;
+                document.querySelector(".performance-titles").scrollLeft -= 500;
                 break;  
         }
     })
