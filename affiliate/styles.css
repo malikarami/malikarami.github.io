@@ -212,7 +212,7 @@
     height: 64px;
     margin-right: 129px;
     padding: 8px 0;
-    background-image: linear-gradient(to left, rgba(128, 32, 32, 0) 0%, #fff);
+    background-image: linear-gradient(to left, rgba(128, 32, 32, 0) 0%, white);
   }
 
   .divider-line{ 
