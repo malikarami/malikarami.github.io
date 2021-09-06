@@ -211,11 +211,19 @@
     height: 64px;
     margin-right: 129px;
     padding: 8px 0;
+<<<<<<< HEAD
     background: linear-gradient(to left, rgba(128, 32, 32, 0) 0%, #fff);
     background: -moz-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, #fff);
     background: -webkit-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, #fff);
     background: -o-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, #fff);
     background: -ms-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, #fff);
+=======
+    background: -moz-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, white);
+    background: -webkit-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, white);
+    background: -o-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, white);
+    background: -ms-linear-gradient(to left, rgba(128, 32, 32, 0) 0%, white);
+    background: linear-gradient(to left, rgba(128, 32, 32, 0) 0%, white);
+>>>>>>> 752640cc6492e03651e119058089420ea81c7e2d
   }
 
   .divider-line{ 
