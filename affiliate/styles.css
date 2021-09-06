@@ -211,11 +211,11 @@
     height: 64px;
     margin-right: 129px;
     padding: 8px 0;
-    background-image: -moz-linear-gradient(to left, rgba(255, 255, 255, 0), white);
-    background-image: -webkit-linear-gradient(to left,rgba(255, 255, 255, 0), white);
-    background-image: -o-linear-gradient(to left,rgba(255, 255, 255, 0), white);
-    background-image: -ms-linear-gradient(to left, rgba(255, 255, 255, 0), white);
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    background-image: -moz-linear-gradient(to left, r#fff0, white);
+    background-image: -webkit-linear-gradient(to left,#fff0, white);
+    background-image: -o-linear-gradient(to left,#fff0, white);
+    background-image: -ms-linear-gradient(to left, #fff0, white);
+    background-image: linear-gradient(to left, #fff0 , white);
   }
 
   .divider-line{ 
