@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop - Homepage</title>
+    <link href="./css/header.css" rel="stylesheet">
+    <link href="./css/home.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="shared-header">
+        <a href="home.html" class="header-logo" title="Online Shop"></a>
+        <section class="search-bar">
+          <form action="" method="POST">
+            <label for="search-box"><h2 class="search-heading">Search</h2></label>
+            <input type="search" class="header__search-box" name="search" id="search-box" placeholder="what you are looking for?"><button type="submit" class="header__search-button"></button>
+          </form>
+        </section>
+        <button class="header__buy-item header-button__styling">Cart items</button>
+        <a href="login.html" class="header__login-a"><button class="header__login-button header-button__styling">Login</button></a>
+        <button class="hamburger-button">
+            <span class="hamburger-button_bar"></span>
+            <span class="hamburger-button_bar"></span>
+            <span class="hamburger-button_bar"></span>
+        </button>
+        <nav>
+          <ul class="navigation-list">
+            <li><a href="home.html?electronics" title="click to see more">Electronics</a></li>
+            <li><a href="home.html?jewelery" title="click to see more">Jewelries</a></li>
+            <li><a href="home.html?furniture" title="click to see more">Furniture</a></li>
+            <li><a href="home.html?men" title="click to see more">Men</a></li>
+            <li><a href="home.html?women" title="click to see more">Women</a></li>
+            <li><a href="home.html?appliance" title="click to see more">Home-Appliances</a></li>
+            <li><a href="home.html?books" title="click to see more">Books</a></li>
+            <li><a href="home.html?mobiles" title="click to see more">Mobiles</a></li>
+            <li><a href="home.html?tvs" title="click to see more">Tv's</a></li>
+            <li><a href="home.html?computers" title="click to see more">Computers</a></li>
+          </ul>
+        </nav>
+    </header>
+    <aside class="mobile-nav">
+      <button class="close-nav">X</button>
+      <ul class="mobile-nav-list">
+        <li><a href="home.html?electronics" title="click to see more">Electronics</a></li>
+        <li><a href="home.html?jewelery" title="click to see more">Jewelries</a></li>
+        <li><a href="home.html?furniture" title="click to see more">Furniture</a></li>
+        <li><a href="home.html?men" title="click to see more">Men</a></li>
+        <li><a href="home.html?women" title="click to see more">Women</a></li>
+        <li><a href="home.html?appliance" title="click to see more">Home-Appliances</a></li>
+        <li><a href="home.html?books" title="click to see more">Books</a></li>
+        <li><a href="home.html?mobiles" title="click to see more">Mobiles</a></li>
+        <li><a href="home.html?tvs" title="click to see more">Tv's</a></li>
+        <li><a href="home.html?computers" title="click to see more">Computers</a></li>
+      </ul>
+    </aside>
+    <aside class="cart">
+      <button class="cart__close-button close-button__styling">X</button>
+      <div class="cart__product-wrap">
+        <!--<div class="cart__product" id="cart__product-template" style="display: none;">
+          <img src="./media/product.jpeg">
+            <button class="cart__delete"></button>
+            <span class="cart__name"></span>
+            <span class="cart__info"><span class="cart__info--price"></span></span>
+        </div>-->
+      </div>
+      <div class="cart__buttons-wrap">
+        <p class="cart__price">Total Price: <span></span></p>
+        <button class="cart__buy-items">Buy Items</button>
+        <button class="cart__delete-items">Delete All</button>
+      </div>
+    </aside>
+    <main>
+      <div class="product-list-wrap">
+
+        <div class="product-wrap" style="display: none;">
+          <div class="product" id="0">
+            <div class="button-container">
+              <button class="stock-factory" title="add to stock factory">Stock factory+</button>
+              <button class="add-fav-button" title="add to whishlist"></button>
+            </div>
+            <img class="product-image" src="./media/product.jpeg" alt="" title="click to see the details">
+            <div class="product-info">
+              <h2>Product Name</h2>
+              <p class="price">$90</p>
+              <p class="discount">$100</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <script src="./js/shared.js"></script>
+    <script src="./js/home.js" defer></script>
+  </body>
+</html>

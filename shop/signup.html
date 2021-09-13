@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Shop - Login</title>
+        <link href="./css/signup.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Padauk&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Spartan:wght@100;200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header"></header>
+        <main>
+            <form class="sign-up">
+                <label for="name" >Name: </label>
+                <input id="name" name="name" placeholder="firstname lastname" required>
+                <label for="email" >Email: </label>
+                <input id="email" name="email" placeholder="@example.com" required>
+                <label for="username" >Username: </label>
+                <input id="username" name="username" placeholder="choose username" required>
+                <label for="password" >Password:  </label>
+                <input id="password" name="password" placeholder="choose password" required>
+                <label for="address" >Address:  </label>
+                <input id="address" name="address" placeholder="country, city, town,...">
+                <label for="phone" >Phone:  </label>
+                <input id="phone" name="phone" placeholder="cellphone or home number">
+                <input type="checkbox" value="Sign Up">
+                <span>I agree to <a href="">the terms of service</a></span>
+                <input class="submit" type="submit" value="Sign Up">
+            </form>
+            <a class="button" href="login.html">Cancel</a>
+        </main>
+        <script src="./js/authentication.js"></script>
+    </body>
+</html>
