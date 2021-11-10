@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Knowledge Sharing - Transform</title>
+        <meta name="author" content="Maryam and Amirhossein">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <a class="home" href="../index.html"><</a>
+            <section class="chapter">
+                <h1>Transform</h1>
+
+                <section>
+                    <h2>Transform Property</h2>
+                    <div class="content">
+                        <p>The actual syntax for the <code>transform</code> property is quite simple, including the transform property followed by the value. The value specifies the transform type followed by a specific amount inside parentheses.</p>
+                        <ul>
+                            <ul>
+                                <li>Rotate</li>
+                                <li>Scale</li>
+                                <li>Translate</li>
+                                <li>Skew</li>
+                                <li>Perspective</li>
+                            </ul>
+                        </ul>
+                        <br/>
+                        <p>It is common for multiple transforms to be used at once, rotating and scaling the size of an element at the same time for example. To combine transforms, list the transform values within the transform property <b>one after the other without the use of commas</b>. Using multiple transform declarations will not work, as each declaration will <b>overwrite</b> the one above it.</p>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Rotate</h2>
+                    <div class="content">
+                        <p>The <code>rotate</code> value provides the ability to <b>rotate</b> an element from <b>0</b> to <b>360</b> degrees. Using a <u>positive</u> value will rotate an element <u>clockwise</u>, and using a <u>negative</u> value will rotate the element <u>counterclockwise</u>. It is also possible to rotate the element along one of the X, Y, Z axis just by using <code>rotateX</code>, <code>rotateY</code> or <code>rotateZ</code></p>
+                        <div class="result">
+                            <div class="original">
+                                <p>rotate(20deg)</p>
+                                <div class="spin">
+                                    <figure class="box box-1-rotate">Box 1</figure>
+                                </div>
+                            </div>
+                            <div class="original">
+                                <p>rotate(-55deg)</p>
+                                <div class="spin">
+                                    <figure class="box box-2-rotate">Box 2</figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Scale</h2>
+                    <div class="content">
+                        <p>Using the <code>scale</code> value within the <code>transform</code> property allows you to change the appeared size of an element. The default scale value is <code>1</code>, therefore any value between <code>.99</code> and <code>.01</code> makes an element appear smaller while any value greater than or equal to <code>1.01</code> makes an element appear larger. It is possible to scale only the height or width of an element using the <code>scaleX</code> and <code>scaleY</code> values. The <code>scaleX</code> value will scale the width of an element while the <code>scaleY</code> value will scale the height of an element.</p>
+                    </div>
+                    <div class="result">
+                        <div class="original">
+                            <p>scaleX(.5)</p>
+                            <div class="spin">
+                                <figure class="box box-scale-1">Box 1</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>scaleY(1.15)</p>
+                            <div class="spin">
+                                <figure class="box box-scale-2">Box 2</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>scale(2, 1.15)</p>
+                            <div class="spin">
+                                <figure class="box box-scale-3">Box 3</figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Translate</h2>
+                    <div class="content">
+                        <p>The <code>translate</code> value works a bit like that of relative positioning, pushing and pulling an element in different directions without interrupting the normal flow of the document. Using the <code>translateX</code> value will change the position of an element on the horizontal axis while using the <code>translateY</code> value will change the position of an element on the vertical axis. The distance values used within the <code>translate</code> value may be any general length measurement, most commonly pixels or percentages. <b>Positive</b> values will push an element <b>down</b> and to the <b>right</b> of its default position while <b>negative</b> values will pull an element <b>up</b> and to the <b>left</b> of its default position.</p>
+                    </div>
+                    <div class="result">
+                        <div class="original">
+                            <p>translateX(-10px)</p>
+                            <div class="spin">
+                                <figure class="box box-1-translate">Box 1</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>translateY(25%)</p>
+                            <div class="spin">
+                                <figure class="box box-2-translate">Box 2</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>translate(-10px, 25%)</p>
+                            <div class="spin">
+                                <figure class="box box-3-translate">Box 3</figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Skew</h2>
+                    <div class="content">
+                        <p><code>skew</code>, is used to <b>distort</b> elements on the horizontal axis, vertical axis, or both.Using the <code>skewX</code> value distorts an element on the horizontal axis while the <code>skewY</code> value distorts an element on the vertical axis. The distance calculation of the <code>skew</code> value is measured in units of degrees. Length measurements, such as pixels or percentages, do not apply here.</p>
+                    </div>
+                    <div class="result">
+                        <div class="original">
+                            <p>skewX(5deg)</p>
+
+                            <div class="spin">
+                                <figure class="box box-1-skew">Box 1</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>skewX(-20deg)</p>
+
+                            <div class="spin">
+                                <figure class="box box-2-skew">Box 2</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>skew(5deg, -20deg)</p>
+                            <div class="spin">
+                                <figure class="box box-3-skew">Box 3</figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Perspective and 3D Transforms</h2>
+                    <div class="content">
+                        <p>In order for <b>three-dimensional transforms to work</b> the elements need a perspective from which to transform. The perspective for each element can be thought of as a <i>vanishing point</i>, similar to that which can be seen in three-dimensional drawings. <br/>The perspective of an element can be set in two different ways. One way includes using the perspective value within the transform property <b>on individual elements</b>, while the other includes using the perspective property <b>on the parent element</b> residing over child elements being transformed.<br/>The perspective value can be set as none or a length measurement. The none value turns off any perspective, while the length value will set the <b>depth</b> of the perspective.</p>
+                    </div>
+                    <div class="result">
+                        <div class="original">
+                            <p>perspective(200px)<br/>rotateX(45deg)</p>
+                            <div class="spin">
+                                <figure class="box box-1-perspective">Box 1</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>perspective(200px)</p>
+                            <div class="spin">
+                                <figure class="box box-2-perspective">Box 2</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>rotateX(45deg)</p>
+                            <div class="spin">
+                                <figure class="box box-3-perspective">Box 3</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>translateZ(-20px)</p>
+                            <div class="spin">
+                                <figure class="box box-5-perspective">Box 4</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>perspective(100px) translateZ(-20px)</p>
+                            <div class="spin">
+                                <figure class="box box-4-perspective">Box 5</figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Transform/Perspective Origin</h2>
+                    <div class="content">
+                        <p>The default transform origin is the dead center of an element, both 50% horizontally and 50% vertically. To change this default origin position the transform-origin property may be used. As with setting a transform-origin you can also set a perspective-origin. The large difference between the two falls where the origin of a transform determines the coordinates used to calculate the change of a transform, while the origin of a perspective identifies the coordinates of the vanishing point of a transform.<br/>
+                            <code>transform-origin</code>: x-offset/keyword  y-offset/keyword  z-offset<br/>
+                            <code>perspective-origin</code>: x-position y-position<br/>
+                        </p>
+                    </div>
+                    <div class="result">
+                        <div class="original">
+                            <p>transform-origin: 20px 50px<br/>for scale and translate</p>
+                            <div class="spin">
+                                <figure class="box box-1-origin">Box 1</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>perspective-origin: 20px 40px<br/>for a rotation</p>
+                            <div class="spin">
+                                <figure class="box box-2-origin">Box 2</figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Transform-style and backface-visibility</h2>
+                    <div class="content">
+                        <p>
+                            On occasion three-dimensional transforms will be applied on an element that is nested within a parent element which is also being transformed. In this event, the nested, transformed elements will not appear in their own three-dimensional space. To allow nested elements to transform in their own three-dimensional plane use the <code>transform-style</code> property with the <code>preserve-3d</code> value. The default value is <code>flat</code>.
+                        </p>
+                        <p>
+                            When working with three-dimensional transforms, elements will occasionally be transformed in a way that causes them to face away from the screen. This may be caused by setting the rotateY(180deg) value for example. By default these elements are shown from the back. So if you prefer not to see these elements at all, set the <code>backface-visibility</code> property to <code>hidden</code>, and you will hide the element whenever it is facing away from the screen.
+                        </p>
+                    </div>
+                    <div class="result">
+                        <div class="original">
+                            <p>hidden</p>
+                            <div class="spin">
+                                <figure class="box box-1-face">Box</figure>
+                            </div>
+                        </div>
+                        <div class="original">
+                            <p>show</p>
+                            <div class="spin">
+                                <figure class="box">Box</figure>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+                <section>
+                    <h2>Transform Matrix</h2>
+                    <div class="content">
+                        <p>Behind every transform there is also a matrix explicitly defining the behavior of the transform. Using the <code>rotate</code>, <code>scale</code>, <code>transition</code>, and <code>skew</code> values provide an easy way to establish this matrix. However, should you be mathematically inclined, and prefer to take a deeper dive into transforms, try your hand at using the <code>matrix</code> property.</p>
+                        <p>You can use the link below: <br/><a href="https://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/" rel="nofollow">https://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/</a></p>
+                    </div>
+                </section>
+                <div class="divider-wrap">
+                    <div class="divider"></div>
+                </div>
+
+            </section>
+
+        </main>
+    </body>
+</html>

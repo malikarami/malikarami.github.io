@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Dana;
+    src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot');
+    src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.tap30.org/fonts/dana/woff2/dana-regular.woff2') format('woff2'),
+    url('https://cdn.tap30.org/fonts/dana/woff/dana-regular.woff') format('woff');
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #858d8f;
+    font-family: Dana;
+    font-size: 20px;
+}
+
+body{
+    width: 100vw;
+    background: black;
+}
+main{
+    background: black;
+    margin: auto;
+}
+
+.link-container{
+    margin: auto;
+    width: 47vw;
+}
+
+nav{
+    padding-top: calc(50vh - 100px);
+}
+
+nav h1{
+    background: black;
+    color: orangered;
+    width: 100vw;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+a:hover{
+    color: white;
+}

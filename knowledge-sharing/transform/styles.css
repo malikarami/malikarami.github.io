@@ -1,0 +1,250 @@
+@font-face {
+    font-family: Dana;
+    src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot');
+    src: url('https://cdn.tap30.org/fonts/dana/eot/dana-regular.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.tap30.org/fonts/dana/woff2/dana-regular.woff2') format('woff2'),
+    url('https://cdn.tap30.org/fonts/dana/woff/dana-regular.woff') format('woff');
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #4c525e;
+    font-family: Dana;
+    font-size: 20px;
+}
+
+body{
+    width: 100vw;
+    background: black;
+}
+main{
+    background: black;
+    margin: auto;
+}
+
+.home{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    background: orange;
+    color: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.chapter{
+    height: 100vh;
+}
+
+.chapter h1{
+    background: black;
+    color: orange;
+    height: 100vh;
+    font-size: 40px;
+    width: 100vw;
+    padding-top: calc(50vh - 50px);
+    text-align: center;
+}
+
+.chapter .divider-wrap{
+    color: #2fb451;
+    background: black;
+    height: 20px;
+    padding-top: 10px;
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.chapter .divider-wrap .divider{
+    color: #ff4200;
+    border-top: 1px solid orange;
+    width: 50vw;
+    left: 20vw;
+    height: 1px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 1px 2px, rgba(0, 0, 0, 0) 0px 2px 4px, rgb(255, 165, 0) 0px 4px 8px, rgb(255, 165, 0) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    position: absolute;
+}
+
+.chapter > section{
+    margin: auto;
+    width: 90%;
+    min-height: 100vh;
+    height: auto;
+    padding: 50px 50px;
+    background: white;
+}
+
+.chapter section h2{
+    color: orangered;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 2px rgba(255, 66, 0, 0.3), -1px -1px 2px rgba(255, 66, 0, 0.3);
+    font-size: 24px;
+}
+
+.content p{
+    margin: 0 10px 50px 0;
+}
+.content p b{
+    color: black;
+}
+.content p code{
+    background: rgba(211, 211, 211, 0.61);
+    padding: 0 5px;
+    font-size: 18px;
+    color: #45403c;
+    font-weight: lighter;
+    font-family: "Courier New";
+}
+
+.content .result{
+    margin: auto;
+    width: calc(80% + 1px);
+}
+
+.content .result > iframe{
+    border: #2fb451 1px solid;
+}
+
+.content ul{
+    padding-left: 50px;
+}
+
+.result {
+    color: #fff;
+    font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 30px 0 0;
+    width: calc(80% + 1px);
+}
+
+.result .original, .result .box {
+    border-radius: 6px;
+}
+
+.result .original {
+    background: #eaeaed;
+    border: 1px dashed #cecfd5;
+    margin: 12px 20px;
+}
+
+.result .box {
+    background: orangered;
+    height: 95px;
+    line-height: 95px;
+    text-align: center;
+    width: 95px;
+}
+
+.result p{
+    height: 70px;
+    position: absolute;
+    top: -40px;
+    text-align: left;
+    display: inline-block;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color: rgba(255, 66, 0, 0.47);
+    font-size: 16px;
+}
+
+.result p a{
+    color: #2fb451;
+}
+
+.result .spin {
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.result .spin:hover {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.box-1-rotate {
+    transform: rotate(20deg);
+}
+.box-2-rotate {
+    transform: rotate(-55deg);
+}
+
+.result .box-scale-1 {
+    transform: scaleX(.5);
+}
+.result .box-scale-2 {
+    transform: scaleY(1.15);
+}
+.result .box-scale-3 {
+    transform: scale(2, 1.15);
+}
+
+.box-1-translate {
+    transform: translateX(-10px);
+}
+.box-2-translate {
+    transform: translateY(25%);
+}
+.box-3-translate {
+    transform: translate(-10px, 25%);
+}
+
+.box-1-skew {
+    transform: skewX(5deg);
+}
+.box-2-skew {
+    transform: skewY(-20deg);
+}
+.box-3-skew {
+    transform: skew(5deg, -20deg);
+}
+
+.box-1-perspective {
+    transform: perspective(200px) rotateX(45deg);
+}
+.box-2-perspective {
+    transform: perspective(200px);
+}
+.box-3-perspective {
+    transform: rotateX(45deg);
+}
+.box-4-perspective {
+    transform: perspective(100px) translateZ(-20px);
+}
+.box-5-perspective {
+    transform: translateZ(-20px);
+}
+
+.box-1-origin{
+    transform: scale(.75) translate(-10px, -10px);
+    transform-origin: 20px 50px;
+}
+.box-2-origin{
+    transform: rotateX(45deg);
+    perspective-origin: 20px 40px;
+}
+
+.box-1-face{
+    backface-visibility: hidden;
+}
