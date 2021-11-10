@@ -26,8 +26,8 @@ main{
 }
 
 .link-container{
-    margin: auto;
-    width: 47vw;
+    width: 100vw;
+    padding-left: 400px;
 }
 
 nav{
