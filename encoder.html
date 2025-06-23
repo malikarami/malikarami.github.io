@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link Encoder/Decoder</title>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9f9f9;
+    }
+    .container {
+      background: #fff;
+      padding: 32px 24px 28px 24px;
+      border-radius: 14px;
+      box-shadow: 0 4px 32px #0002;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      gap: 14px;
+    }
+    .field-group {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    textarea {
+      width: 100%;
+      font-size: 1.04rem;
+      padding: 12px 64px 12px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+      box-sizing: border-box;
+    }
+    .copy-btn {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      bottom: 8px;
+      margin: 0;
+      border: none;
+      background: #eee;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      padding: 2px 8px;
+      transition: background 0.18s;
+    }
+    .copy-btn:active {
+      background: #d1ffd1;
+    }
+    button.action-btn {
+      width: 100%;
+      margin-top: 2px;
+      margin-bottom: 2px;
+      border: none;
+      background: #1976fc;
+      color: white;
+      padding: 9px 0;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.08rem;
+      transition: background 0.2s;
+    }
+    button.action-btn:active {
+      background: #1252fd;
+    }
+    .footer {
+      margin-top: 19px;
+      color: #888;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="field-group">
+    <textarea id="inputLink" rows="3" placeholder="insert the link"></textarea>
+    <button class="copy-btn" onclick="copyToClipboard('inputLink')">copy</button>
+  </div>
+  <button class="action-btn" onclick="handleEncode()">encode</button>
+  <button class="action-btn" onclick="handleDecode()">decode</button>
+  <div class="field-group">
+    <textarea id="inputCode" rows="3" placeholder="insert the code"></textarea>
+    <button class="copy-btn" onclick="copyToClipboard('inputCode')">copy</button>
+  </div>
+  <div class="footer">
+    ساده‌ترین ابزار رمزگذاری/رمزگشایی لینک ـ ساخته شده توسط شما با کمک چیتی
+  </div>
+</div>
+<script>
+  function encoder(url) {
+    const protocolMatch = url.split('://')?.[0];
+    const protocol = protocolMatch || 'https';
+    const reversedProtocol = protocol.split('').reverse().join('');
+    const restOfUrl = url.split('://')?.[1];
+    const encodedRest = restOfUrl.replace(/\./g, '^').replace(/\//g, '>');
+    return reversedProtocol + '()' + encodedRest;
+  }
+
+  function decoder(encodedUrl) {
+    const protocolReversedMatch = encodedUrl.split('()')?.[0];
+    const reversedProtocol = protocolReversedMatch || 'sptth';
+    const protocol = reversedProtocol.split('').reverse().join('');
+    const restOfEncoded = encodedUrl.split('()')?.[1];
+    const decodedRest = restOfEncoded.replace(/\^/g, '.').replace(/>/g, '/');
+    return protocol + '://' + decodedRest;
+  }
+
+  function handleEncode() {
+    const input = document.getElementById('inputLink').value.trim();
+    document.getElementById('inputCode').value = encoder(input);
+  }
+
+  function handleDecode() {
+    const input = document.getElementById('inputCode').value.trim();
+    document.getElementById('inputLink').value = decoder(input);
+  }
+
+  function copyToClipboard(fieldId) {
+    const textarea = document.getElementById(fieldId);
+    textarea.select();
+    document.execCommand('copy');
+  }
+</script>
+</body>
+</html>
